@@ -23,6 +23,7 @@ window/stretch/aspect="expand"
 [global_group]
 
 Pipe="A group for colliding pipes"
+ScoreZone="When an object passes this zone they should get a point"
 
 [input]
 

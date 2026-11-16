@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://daamfavitramx"]
 
 [ext_resource type="Texture2D" uid="uid://rhacd4jey2dy" path="res://icon.svg" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://dijw56jb8w4cp" path="res://player_logic.gd" id="1_onrkg"]
+[ext_resource type="Script" uid="uid://luohdvl23p8q" path="res://player_logic.gd" id="1_onrkg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kvnt5"]
 radius = 56.0357
@@ -10,6 +10,7 @@ radius = 56.0357
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=856196591]
+position = Vector2(-2, 2)
 texture = ExtResource("1_4flbx")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=180168614]

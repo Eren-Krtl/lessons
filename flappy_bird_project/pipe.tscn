@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://meg0la27cr4t"]
 
+[ext_resource type="Script" uid="uid://d0cms0f2hgpnh" path="res://pipe_logic.gd" id="1_78010"]
 [ext_resource type="Texture2D" uid="uid://rhacd4jey2dy" path="res://icon.svg" id="1_bepn3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y75q1"]
@@ -8,7 +9,11 @@ size = Vector2(103, 507)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_no8no"]
 size = Vector2(100, 537.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlujv"]
+size = Vector2(16, 336)
+
 [node name="Pipe" type="CharacterBody2D" unique_id=1053881023]
+script = ExtResource("1_78010")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1673362451]
 modulate = Color(0, 1, 0, 1)
@@ -31,3 +36,9 @@ shape = SubResource("RectangleShape2D_y75q1")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1151744654]
 position = Vector2(1, -424.25)
 shape = SubResource("RectangleShape2D_no8no")
+
+[node name="ScoreZone" type="Area2D" parent="." unique_id=1469999985 groups=["ScoreZone"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScoreZone" unique_id=1277406945]
+shape = SubResource("RectangleShape2D_jlujv")
+debug_color = Color(0.79395455, 0.07480506, 0.99999994, 0.41960785)

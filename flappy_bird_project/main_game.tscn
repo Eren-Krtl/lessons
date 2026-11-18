@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cis6emlt32gup"]
 
 [ext_resource type="PackedScene" uid="uid://daamfavitramx" path="res://player.tscn" id="1_1oj5k"]
-[ext_resource type="Script" uid="uid://cj1dj4ikvoo0r" path="res://main_game_logic.gd" id="1_ykeeq"]
+[ext_resource type="Script" uid="uid://cj1dj4ikvoo0r" path="res://scripts/main_game_logic.gd" id="1_ykeeq"]
 [ext_resource type="PackedScene" uid="uid://meg0la27cr4t" path="res://pipe.tscn" id="2_yx7mw"]
 
 [node name="Main_Game" type="Node2D" unique_id=1849081662 node_paths=PackedStringArray("GameOverScreen", "ScoreLabel")]

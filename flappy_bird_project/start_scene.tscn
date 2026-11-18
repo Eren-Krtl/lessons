@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d3bklt3iv1qp7"]
+
+[ext_resource type="Script" uid="uid://bybii24hxohwd" path="res://scripts/start_scene_logic.gd" id="1_mbe3m"]
+
+[node name="Start_Scene" type="Node2D" unique_id=461359380]
+script = ExtResource("1_mbe3m")
+
+[node name="Panel" type="Panel" parent="." unique_id=400318981]
+offset_left = -22.0
+offset_top = -14.0
+offset_right = 1204.0
+offset_bottom = 691.0
+
+[node name="StartButton" type="Button" parent="." unique_id=966692]
+offset_left = 311.0
+offset_top = 220.0
+offset_right = 766.0
+offset_bottom = 414.0
+theme_override_font_sizes/font_size = 60
+text = "Play Game
+"
+
+[node name="QuitButton" type="Button" parent="." unique_id=303040692]
+offset_left = 839.0
+offset_top = 532.0
+offset_right = 1128.0
+offset_bottom = 627.0
+theme_override_font_sizes/font_size = 53
+text = "Quit game"
+
+[node name="Label" type="Label" parent="." unique_id=1352137574]
+offset_left = 194.0
+offset_top = 89.0
+offset_right = 568.0
+offset_bottom = 184.0
+theme_override_font_sizes/font_size = 69
+text = "Flappy Bird"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

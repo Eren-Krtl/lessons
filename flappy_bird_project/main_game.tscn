@@ -41,6 +41,15 @@ offset_bottom = 247.0
 theme_override_font_sizes/font_size = 58
 text = " You lost the game"
 
+[node name="GoToMainMenuButton" type="Button" parent="GameOverPanel" unique_id=638130356]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 540.0
+offset_right = 718.07996
+offset_bottom = 592.0
+theme_override_font_sizes/font_size = 31
+text = "Return to main menu"
+
 [node name="Timer" type="Timer" parent="." unique_id=1106874153]
 wait_time = 2.0
 autostart = true
@@ -58,4 +67,5 @@ vertical_alignment = 1
 [connection signal="Game_Lost" from="Player" to="." method="_on_player_game_lost"]
 [connection signal="Point_Gained" from="Player" to="." method="_on_player_point_gained"]
 [connection signal="pressed" from="GameOverPanel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOverPanel/GoToMainMenuButton" to="." method="_on_go_to_main_menu_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

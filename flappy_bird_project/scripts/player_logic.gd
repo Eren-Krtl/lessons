@@ -6,6 +6,10 @@ signal Point_Gained
 var Gravity = 20
 var JumpPower = 500
 
+@onready var AnimatedSprite:AnimatedSprite2D = %AnimatedSprite
+@onready var AniPlayer:AnimationPlayer = %AnimationPlayer
+@onready var JumpParticles:CPUParticles2D = %JumpParticles
+
 func _physics_process(delta: float) -> void:
 	if(position.y > 400 || position.y < -400):
 		emit_signal("Game_Lost")
@@ -14,7 +18,7 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if(event.is_action_pressed("Jump")):
-		velocity.y = -JumpPower
+		flap_wings()
 
 func _collision_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("Pipe")):
@@ -22,3 +26,11 @@ func _collision_2d_area_entered(area: Area2D) -> void:
 	if(area.is_in_group("ScoreZone")):
 		emit_signal("Point_Gained")
 		print("collided and got point")
+
+func flap_wings():
+	AnimatedSprite.stop()
+	AnimatedSprite.play("flap")
+	AniPlayer.stop()
+	AniPlayer.play("flap")
+	JumpParticles.emitting = true
+	velocity.y = -JumpPower

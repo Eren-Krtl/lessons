@@ -26,4 +26,6 @@ func _on_player_game_lost() -> void:
 func _on_player_point_gained() -> void:
 	Score += 1
 	ScoreLabel.text = "Score: " + str(Score)
-	
+
+func _on_go_to_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://start_scene.tscn")

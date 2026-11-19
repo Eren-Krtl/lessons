@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://sgo53oucgyb7"]
+
+[ext_resource type="Script" uid="uid://dwuemdv0hxl0o" path="res://scripts/bullet_logic.gd" id="1_v8qja"]
+[ext_resource type="Texture2D" uid="uid://b1x2wdxxlpcj2" path="res://icon.svg" id="2_t4vbm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y75q1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t4vbm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bullet" type="CharacterBody2D" unique_id=1797948751]
+script = ExtResource("1_v8qja")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1998789279]
+rotation = -1.5707964
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_y75q1")

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b1x2wdxxlpcj2" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://dimh5yubn8l6c" path="res://scripts/player_logic.gd" id="1_onrkg"]
+[ext_resource type="PackedScene" uid="uid://sgo53oucgyb7" path="res://bullet.tscn" id="2_i3pqv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_y75q1"]
 animations = [{
@@ -16,7 +17,16 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=1228234699]
 script = ExtResource("1_onrkg")
+PacBullet = ExtResource("2_i3pqv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=73799089]
 scale = Vector2(0.2, 0.3)
 sprite_frames = SubResource("SpriteFrames_y75q1")
+
+[node name="ShootPosition" type="Marker2D" parent="." unique_id=1952735725]
+unique_name_in_owner = true
+position = Vector2(0, -18)
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1311027622]
+unique_name_in_owner = true
+wait_time = 0.2
